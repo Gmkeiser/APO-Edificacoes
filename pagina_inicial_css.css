@@ -21,6 +21,15 @@ h1 {
   text-align: right;
 }
 
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 button {
   margin: 1.5rem;
   font-size: 1.25rem;
@@ -33,10 +42,11 @@ button {
 
 .box {
   background-color: #1e78ff;
-  margin: 0 1.5rem;
+  margin: 1.5rem;
   height: 150px;
   display: grid;
   grid-template-columns: 25% 75%;
+  width: 100%;
   max-width: 600px;
 }
 
