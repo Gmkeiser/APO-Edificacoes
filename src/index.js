@@ -15,5 +15,6 @@ function makeRoute(path, filename)
 
 makeRoute('/', 'login.html')
 makeRoute('/home', 'pagina_inicial.html')
+makeRoute('/school-register', 'cadastro_nova_escola.html')
 
 app.listen(PORT, () => console.log(`server is listening on port ${PORT}`))
