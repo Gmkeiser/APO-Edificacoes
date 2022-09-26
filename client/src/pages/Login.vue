@@ -7,10 +7,17 @@
     <h1 class="text-h4">Faça seu login</h1>
     <div>
       <q-input label="E-mail" style="width: 300px;"/>
-      <q-input label="Senha" style="width: 300px;"/>
+      <q-input label="Senha" type="password" style="width: 300px;"/>
     </div>
     <a href="">Esqueci minha senha</a>
-    <q-btn unelevated rounded label="Login" color="amber" style="width: 150px;"/>
+    <q-btn  
+      rounded
+      unelevated
+      label="Login"
+      color="amber"
+      style="width: 200px;"
+      @click="handleLogin()"
+    />
     <div>
       <span>Ainda não tem uma conta? </span>
       <a href="">Cadastre-se</a>
@@ -22,6 +29,11 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'IndexPage'
+  name: 'IndexPage',
+  methods: {
+    handleLogin() {
+      window.location.href = '/';
+    }
+  }
 })
 </script>

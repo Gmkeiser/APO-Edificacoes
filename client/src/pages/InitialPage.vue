@@ -8,9 +8,29 @@
 
     <div class="flex align-center justify-center">
       <div class="q-ma-lg column">
-        <q-btn unelevated icon="school" color="primary" class="q-mb-sm" label="Cadastrar nova escola" />
-        <q-btn unelevated icon="check" color="primary" class="q-mb-sm" label="Avaliar escoola" />
-        <q-btn rounded unelevated color="amber" class="q-mb-sm text-black" label="Meu Perfil" />
+        <q-btn
+          unelevated
+          icon="school"
+          color="primary"
+          class="q-mb-sm"
+          label="Cadastrar nova escola"
+          @click="redirectTo('/school/register')"
+        />
+        <q-btn
+          unelevated
+          icon="check"
+          color="primary"
+          class="q-mb-sm"
+          label="Avaliar escola"
+        />
+        <q-btn
+          rounded
+          unelevated
+          color="amber"
+          class="q-mb-sm text-black"
+          label="Meu Perfil"
+          @click="redirectTo('/profile')"
+        />
       </div>
     </div>
   </q-page>
@@ -20,7 +40,12 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'InitialPage'
+  name: 'InitialPage',
+  methods: {
+    redirectTo(page) {
+      window.location.href = `#${page}`;
+    }
+  }
 })
 </script>
   

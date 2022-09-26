@@ -10,7 +10,13 @@
         <q-input label="Telefone + DDD" mask="(##) #####-####" />
         <q-input label="Responsável" />
       </q-form>
-      <q-btn color="amber" label="Adicionar" unelevated rounded />
+      <q-btn
+        rounded
+        unelevated
+        color="amber"
+        label="Adicionar"
+        @click="redirectTo('/school/list')"
+      />
     </q-card>
   </q-page>
 </template>
@@ -20,5 +26,10 @@ import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   name: 'RegisterNewSchool',
+  methods: {
+    redirectTo(page) {
+      window.location.href = `#${page}`;
+    }
+  }
 })
 </script>

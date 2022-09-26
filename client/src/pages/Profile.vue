@@ -1,7 +1,12 @@
 <template>
   <q-page>
     <q-toolbar class="bg-primary">
-      <q-btn dense flat round icon="arrow_back" class="text-white" />
+      <q-btn
+        dense flat round
+        icon="arrow_back"
+        class="text-white"
+        @click="redirectTo('/')"
+      />
       <q-toolbar-title>
         <h1 class="text-white text-h6">Minha conta</h1>
       </q-toolbar-title>
@@ -16,7 +21,13 @@
         <q-input class="q-pt-sm" label="E-mail" />
         <q-input class="q-pt-sm" label="Setor" />
       </div>
-      <q-btn unelevated label="Concluir" color="amber" class="q-mt-xl text-black" />
+      <q-btn
+        unelevated
+        color="amber"
+        label="Concluir"
+        class="q-mt-xl text-black"
+        @click="redirectTo('/')"
+      />
     </div>
   </q-page>
 </template>
@@ -26,5 +37,10 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Profile',
+  methods: {
+    redirectTo(page) {
+      window.location.href = `#${page}`;
+    }
+  }
 });
 </script>
