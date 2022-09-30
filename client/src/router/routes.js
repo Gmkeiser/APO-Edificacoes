@@ -11,6 +11,10 @@ const routes = [
       { path: '/school/list', component: () => import('pages/SchoolsList.vue') },
       { path: '/school/ambience', component: () => import('pages/AmbienceSelection.vue') },
       { path: '/school/register', component: () => import('pages/RegisterNewSchool.vue') },
+      { path: '/school/problems', component:()=>import('pages/ProblemReport.vue')},
+      { path: '/school/options', component:()=>import('pages/SelectPage.vue')},
+      { path: '/school/EquipmentCheck', component:()=>import('pages/Equipment')},
+      { path: '/school/EquipmentCheckHistory', component:()=>import('pages/EquipmentHistory')}
     ]
   },
   {
