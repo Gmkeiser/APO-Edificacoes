@@ -51,7 +51,7 @@ const cards = [
 ];
 
 export default defineComponent({
-  name: 'Security',
+  name: 'Sustentability',
   data() {
     return {
       cards,

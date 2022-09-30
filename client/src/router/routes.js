@@ -15,6 +15,7 @@ const routes = [
       { path: '/school/options', component:()=>import('pages/SelectPage.vue')},
       { path: '/school/options/security', component:()=>import('pages/Security.vue') },
       { path: '/school/options/sustentability', component:()=>import('pages/Sustentability.vue') },
+      { path: '/school/options/infraestrutura', component:()=>import('pages/Infraestrutura.vue') },
       { path: '/school/EquipmentCheck', component:()=>import('pages/Equipment.vue')},
       { path: '/school/EquipmentCheckHistory', component:()=>import('pages/EquipmentHistory.vue')}
     ]
