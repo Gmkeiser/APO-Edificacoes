@@ -13,8 +13,8 @@ const routes = [
       { path: '/school/register', component: () => import('pages/RegisterNewSchool.vue') },
       { path: '/school/problems', component:()=>import('pages/ProblemReport.vue')},
       { path: '/school/options', component:()=>import('pages/SelectPage.vue')},
-      { path: '/school/EquipmentCheck', component:()=>import('pages/Equipment')},
-      { path: '/school/EquipmentCheckHistory', component:()=>import('pages/EquipmentHistory')}
+      { path: '/school/EquipmentCheck', component:()=>import('pages/Equipment.vue')},
+      { path: '/school/EquipmentCheckHistory', component:()=>import('pages/EquipmentHistory.vue')}
     ]
   },
   {
