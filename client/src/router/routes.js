@@ -14,6 +14,7 @@ const routes = [
       { path: '/school/problems', component:()=>import('pages/ProblemReport.vue')},
       { path: '/school/options', component:()=>import('pages/SelectPage.vue')},
       { path: '/school/options/security', component:()=>import('pages/Security.vue') },
+      { path: '/school/options/sustentability', component:()=>import('pages/Sustentability.vue') },
       { path: '/school/EquipmentCheck', component:()=>import('pages/Equipment.vue')},
       { path: '/school/EquipmentCheckHistory', component:()=>import('pages/EquipmentHistory.vue')}
     ]
