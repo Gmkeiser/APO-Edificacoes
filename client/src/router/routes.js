@@ -16,6 +16,7 @@ const routes = [
       { path: '/school/options/security', component:()=>import('pages/Security.vue') },
       { path: '/school/options/sustentability', component:()=>import('pages/Sustentability.vue') },
       { path: '/school/options/infraestrutura', component:()=>import('pages/Infraestrutura.vue') },
+      { path: '/school/options/incendio', component:()=>import('pages/PrevencaoCombateIncendio.vue') },
       { path: '/school/EquipmentCheck', component:()=>import('pages/Equipment.vue')},
       { path: '/school/EquipmentCheckHistory', component:()=>import('pages/EquipmentHistory.vue')}
     ]
