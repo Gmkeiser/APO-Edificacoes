@@ -1,21 +1,40 @@
 <template>
   <q-page class="flex column flex-center justify-evenly">
-    <img
-      alt="Jambu"
-      src="~assets/brasao.svg"
-    >
+    <img alt="Jambu" src="~assets/brasao.svg" />
     <h1 class="text-h4">Faça seu login</h1>
-    <div>
-      <q-input label="E-mail" style="width: 300px;"/>
-      <q-input label="Senha" type="password" style="width: 300px;"/>
-    </div>
+    <q-form>
+      <q-input
+        v-model="email"
+        type="email"
+        label="E-mail"
+        style="width: 300px"
+      />
+      <q-input
+        icon="eye"
+        label="Senha"
+        v-model="password"
+        style="width: 300px"
+        :type="isVisible ? 'text' : 'password'"
+      >
+        <template v-slot:append>
+          <q-btn
+            dense
+            rounded
+            flat
+            :icon="isVisible ? 'visibility_off' : 'visibility'"
+            @click="isVisible = !isVisible"
+          />
+        </template>
+      </q-input>
+    </q-form>
     <a href="">Esqueci minha senha</a>
-    <q-btn  
+    <q-btn
       rounded
       unelevated
       label="Login"
       color="amber"
-      style="width: 200px;"
+      class="text-black"
+      style="width: 200px"
       @click="handleLogin()"
     />
     <div>
@@ -26,14 +45,21 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'IndexPage',
+  name: "IndexPage",
+  data() {
+    return {
+      email: "",
+      password: "",
+      isVisible: false,
+    };
+  },
   methods: {
     handleLogin() {
-      window.location.href = '/';
-    }
-  }
-})
+      window.location.href = "/#/home";
+    },
+  },
+});
 </script>
