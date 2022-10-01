@@ -1,34 +1,29 @@
 <template>
   <q-page>
-    <q-toolbar class="bg-primary">
+    <q-toolbar class="bg-primary" align="center">
       <q-toolbar-title class="text-white">
         Prefeitura de Jambu
       </q-toolbar-title>
     </q-toolbar>
 
     <div class="flex align-center justify-center">
-      <div class="q-ma-lg column">
+      <div class="q-ma-lg" style="width: 100%; max-width: 512px">
+        <q-card class="q-mb-md" @click="redirectTo('/school/register')">
+          <q-card-section>
+            <h1 class="text-h6">Cadastrar Nova Escola</h1>
+            <p>Para primeira avaliação cadastrar a escola</p>
+          </q-card-section>
+        </q-card>
+        <q-card class="q-mb-md">
+          <q-card-section>
+            <h1 class="text-h6">Avaliação de Escola</h1>
+          </q-card-section>
+        </q-card>
         <q-btn
-          unelevated
-          icon="school"
-          color="primary"
-          class="q-mb-sm"
-          label="Cadastrar nova escola"
-          @click="redirectTo('/school/register')"
-        />
-        <q-btn
-          unelevated
-          icon="check"
-          color="primary"
-          class="q-mb-sm"
-          label="Avaliar escola"
-        />
-        <q-btn
-          rounded
-          unelevated
           color="amber"
-          class="q-mb-sm text-black"
-          label="Meu Perfil"
+          class="text-black"
+          label="Meu perfil"
+          style="width: 100%; max-width: 512px"
           @click="redirectTo('/profile')"
         />
       </div>
@@ -37,15 +32,14 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'InitialPage',
+  name: "InitialPage",
   methods: {
     redirectTo(page) {
       window.location.href = `#${page}`;
-    }
-  }
-})
+    },
+  },
+});
 </script>
-  

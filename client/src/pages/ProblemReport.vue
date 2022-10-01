@@ -1,45 +1,80 @@
 <template>
   <q-page>
     <q-toolbar class="bg-primary">
-        <q-btn dense rounded flat icon="arrow_back" color="white" />
+      <q-btn dense rounded flat icon="arrow_back" color="white" @click="redirectTo('/school')" />
       <q-toolbar-title class="text-white">
-        Prefeitura de Jambu
+        Escola João e Maria
       </q-toolbar-title>
     </q-toolbar>
     <div class="q-pa-lg fit column justify-center items-center content-center">
-      <q-card
-        class="q-pa-lg"
-        style="width: 100%; max-width: 512px; height: 320px;"
-        >
-        <h1 class="text-h5">Relato de problema</h1>
-        <q-form class="q-pa-sm">
+      <q-card class="column q-pa-lg" style="width: 100%; max-width: 512px">
+        <h1 class="text-h6">Relato de problema</h1>
+        <q-separator />
+        <q-form>
           <q-select
-            borderless
-            v-model="model"
-            :options="SchoolsList"
+            v-model="ambience"
+            class="q-my-md"
             label="Ambiente"
+            :options="ambienceOptions"
           />
           <q-select
-            borderless
-            v-model="model"
-            :options="SchoolsList"
+            v-model="problemType"
+            class="q-my-md"
             label="Tipo do problema"
+            :options="problemTypeOptions"
           />
-          <q-input label="Descrição do problema"></q-input>
-          
+          <q-input
+            v-model="problemDescription"
+            label="Descrição do problema"
+            type="textarea"
+          />
         </q-form>
-        <div class="fit column content-center">
-        <q-btn rounded color="amber" label="Concluir" class="text-black float"/>
-        </div>
+        <q-btn
+          color="amber"
+          label="Concluir"
+          class="text-black q-mt-lg"
+          @click="redirectTo('/school')"
+        />
       </q-card>
     </div>
   </q-page>
 </template>
+
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent } from "vue";
+
+const ambienceOptions = [
+  "Sala de Aula 1º A",
+  "Sala de Aula 2º A",
+  "Sala de Aula 1º B",
+  "Sala de Aula 2º B",
+  "Sala dos Professores",
+  "Sala Informática",
+  "Labs",
+  "Informática",
+  "Refeitório",
+];
+
+const problemTypeOptions = [
+  "Elétrico",
+  "Hidráulico",
+  "Estrutura",
+  "Acabamento",
+  "Limpeza",
+  "Equipamentos",
+];
 
 export default defineComponent({
   name: "ProblemReport",
+  data() {
+    return {
+      ambience: "",
+      problemType: "",
+      problemDescription: "",
+      ambienceOptions,
+      problemTypeOptions,
+    };
+  },
   methods: {
     redirectTo(page) {
       window.location.href = `#${page}`;
