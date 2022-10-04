@@ -30,14 +30,7 @@
         <q-input label="Quantidade de carteiras:" class="q-pa-sm"></q-input>
         <q-input label="Quantidade de carteiras danificadas:" class="q-pa-sm"></q-input>
         <q-input label="Quantidade de armarios:" class="q-pa-sm"></q-input>
-        <q-input label="Quantidade de quadros de giz:" class="q-pa-sm"></q-input>
-        <q-input label="Condição dos quadros de giz:" class="q-pa-sm"></q-input>
-        <q-input label="Quantidade de quadros de mural:" class="q-pa-sm"></q-input>
-        <q-input label="Condição dos quadros de mural:" class="q-pa-sm"></q-input>
-        <q-input label="Quantidade de ventiladores:" class="q-pa-sm"></q-input>
-        <q-input label="Condição dos ventiladores:" class="q-pa-sm"></q-input>
-        <q-input label="Quantidade de condicionadores de ar:" class="q-pa-sm"></q-input>
-        <q-input label="Condição de condicionadores de ar:" class="q-pa-sm"></q-input>
+        <q-input label="Quantidade de armarios danificados:" class="q-pa-sm"></q-input>
         <q-btn
         unelevated
         color="amber"
