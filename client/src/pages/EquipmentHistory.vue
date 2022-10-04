@@ -58,4 +58,15 @@
     </div>
   </q-page>
 </template>
-<script></script>
+<script>
+  import { defineComponent, ref } from "vue";
+  
+  export default defineComponent({
+    name: "EquipmentHistory",
+    methods: {
+      redirectTo(page) {
+        window.location.href = `#${page}`;
+      },
+    },
+  });
+  </script>
