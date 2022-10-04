@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <q-toolbar class="bg-primary">
-      <q-btn dense rounded flat icon="arrow_back" color="white" />
+      <q-btn dense rounded flat icon="arrow_back" color="white" @click="redirectTo('/home')"/>
       <q-toolbar-title>
         <h1 class="text-white text-h6">Sala de Aula 1º A</h1>
       </q-toolbar-title>
@@ -49,7 +49,7 @@
           color="amber"
           label="Concluir"
           class="text-black"
-          @click="redirectTo('/ambience/dimensions')"
+          @click="redirectTo('/home')"
         />
       </div>
     </div>

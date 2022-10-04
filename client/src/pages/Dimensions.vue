@@ -107,7 +107,7 @@
         </q-card-actions>
       </q-card>
 
-      <q-btn color="amber" class="text-black" label="Concluir" />
+      <q-btn color="amber" class="text-black" label="Concluir" @click="redirectTo('/ambience')"/>
     </div>
   </div>
 </template>

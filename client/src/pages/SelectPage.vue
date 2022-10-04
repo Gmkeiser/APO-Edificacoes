@@ -1,6 +1,19 @@
 <template>
-  <q-page class="q-pa-lg">
-    <div class="flex align-center justify-center">
+  <q-page>
+    <q-toolbar class="bg-primary">
+    <q-btn
+      dense
+      rounded
+      flat
+      color="white"
+      icon="arrow_back"
+      @click="redirectTo('/school')"
+    />
+    <q-toolbar-title>
+      <h1 class="text-white text-h6">Escola João e Maria</h1>
+    </q-toolbar-title>
+  </q-toolbar>
+    <div class="q-pa-lg flex align-center justify-center">
       <q-card style="width: 100%; max-width: 512px">
         <q-card-section>
           <h1 class="text-h6">Escola João e Maria</h1>
@@ -54,6 +67,7 @@
             color="primary"
             class="q-mb-md"
             label="Relatório parcial"
+            @click="redirectTo('/school/Rating')"
           />
           <q-btn
             outline
@@ -64,7 +78,7 @@
         </q-card-section>
         <q-separator />
         <q-card-section class="column">
-          <q-btn color="amber" class="text-black" label="Concluir avaliação" />
+          <q-btn color="amber" class="text-black" label="Concluir avaliação" @click="redirectTo('/school')"/>
         </q-card-section>
       </q-card>
     </div>

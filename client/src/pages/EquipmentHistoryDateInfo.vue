@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <q-toolbar class="bg-primary">
-      <q-btn dense rounded flat icon="arrow_back" color="white" />
+      <q-btn dense rounded flat icon="arrow_back" color="white" @click="redirectTo('')"/>
       <q-toolbar-title class="text-white">
         Prefeitura de Jambu
       </q-toolbar-title>

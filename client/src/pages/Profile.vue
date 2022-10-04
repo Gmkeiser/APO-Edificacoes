@@ -5,7 +5,7 @@
         dense flat round
         icon="arrow_back"
         class="text-white"
-        @click="redirectTo('/')"
+        @click="redirectTo('/home')"
       />
       <q-toolbar-title>
         <h1 class="text-white text-h6">Minha conta</h1>

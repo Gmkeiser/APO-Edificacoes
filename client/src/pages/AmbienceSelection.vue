@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <q-toolbar class="bg-primary">
-      <q-btn dense rounded flat icon="arrow_back" color="white" />
+      <q-btn dense rounded flat icon="arrow_back" color="white" @click="redirectTo('/school/options')"/>
       <q-toolbar-title>
         <h1 class="text-white text-h6">Ambientes</h1>
       </q-toolbar-title>
@@ -11,10 +11,10 @@
       <div class="row q-my-sm q-gutter-sm">
         <q-btn color="amber" label="Adicionar" class="col text-black" unelevated rounded
           @click="addAmbiencePrompt = true" />
-        <q-btn color="amber" label="Avaliar" class="col text-black" unelevated rounded />
+        <q-btn color="amber" label="Avaliar" class="col text-black" unelevated rounded @click="redirectTo('/ambience')" />
       </div>
       <div class="row">
-        <q-btn color="amber" label="Concluir avaliação" class="col text-black" unelevated rounded />
+        <q-btn color="amber" label="Concluir avaliação" class="col text-black" unelevated rounded  @click="redirectTo('/school/options')"/>
       </div>
     </div>
     <q-dialog v-model="addAmbiencePrompt">
@@ -59,6 +59,11 @@ const rows = [
 
 export default defineComponent({
   name: 'AmbienceSelection',
+  methods: {
+    redirectTo(page) {
+      window.location.href = `#${page}`;
+    },
+  },
   setup() {
     return {
       rows,

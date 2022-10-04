@@ -14,7 +14,7 @@
             <p>Para primeira avaliação cadastrar a escola</p>
           </q-card-section>
         </q-card>
-        <q-card class="q-mb-md">
+        <q-card class="q-mb-md"  @click="redirectTo('/school/list')">
           <q-card-section>
             <h1 class="text-h6">Avaliação de Escola</h1>
           </q-card-section>

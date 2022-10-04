@@ -1,6 +1,6 @@
 <template>
   <q-toolbar class="bg-primary">
-    <q-btn dense rounded flat icon="arrow_back" color="white" />
+    <q-btn dense rounded flat icon="arrow_back" color="white" @click="redirectTo('/school/options')"/>
     <q-toolbar-title>
       <h1 class="text-white text-h6">Sustentabilidade</h1>
     </q-toolbar-title>
@@ -27,7 +27,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import { defineComponent } from 'vue';
 
@@ -52,6 +51,11 @@ const cards = [
 
 export default defineComponent({
   name: 'Sustentability',
+  methods: {
+      redirectTo(page) {
+        window.location.href = `#${page}`;
+      },
+    },
   data() {
     return {
       cards,

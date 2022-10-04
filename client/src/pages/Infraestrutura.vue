@@ -1,6 +1,6 @@
 <template>
   <q-toolbar class="bg-primary">
-    <q-btn dense rounded flat icon="arrow_back" color="white" />
+    <q-btn dense rounded flat icon="arrow_back" color="white" @click="redirectTo('/school/options')"/>
     <q-toolbar-title>
       <h1 class="text-white text-h6">Infraestrutura</h1>
     </q-toolbar-title>
@@ -50,6 +50,11 @@ const infraestrutura = [
 
 export default defineComponent({
   name: 'Infraestrutura',
+  methods: {
+      redirectTo(page) {
+        window.location.href = `#${page}`;
+      },
+    },
   data() {
     return{
       infraestrutura,

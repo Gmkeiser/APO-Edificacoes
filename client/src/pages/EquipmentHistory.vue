@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <q-toolbar class="bg-primary">
-      <q-btn dense rounded flat icon="arrow_back" color="white" />
+      <q-btn dense rounded flat icon="arrow_back" color="white" @click="redirectTo('')"/>
       <q-toolbar-title class="text-white">
         Prefeitura de Jambu
       </q-toolbar-title>
@@ -58,4 +58,15 @@
     </div>
   </q-page>
 </template>
-<script></script>
+<script>
+  import { defineComponent, ref } from "vue";
+  
+  export default defineComponent({
+    name: "EquipmentHistory",
+    methods: {
+      redirectTo(page) {
+        window.location.href = `#${page}`;
+      },
+    },
+  });
+  </script>

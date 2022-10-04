@@ -1,6 +1,6 @@
 <template>
   <q-toolbar class="bg-primary">
-    <q-btn dense rounded flat icon="arrow_back" color="white" />
+    <q-btn dense rounded flat icon="arrow_back" color="white" @click="redirectTo('/school/options')"/>
     <q-toolbar-title>
       <h1 class="text-white text-h6">Prevenção e Combate a Incêndio</h1>
     </q-toolbar-title>
@@ -66,6 +66,11 @@ import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
   name: 'PrevencaoCombateIncendio',
+  methods: {
+      redirectTo(page) {
+        window.location.href = `#${page}`;
+      },
+    },
   data() {
     return {
       exists: ref(false),
