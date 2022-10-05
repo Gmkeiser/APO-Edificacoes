@@ -22,7 +22,7 @@
       </q-card>
     </div>
     <div class="column">
-      <q-btn label="Concluir avaliação" color="amber" class="text-black" />
+      <q-btn label="Concluir avaliação" color="amber" class="text-black" @click="redirectTo('/school/options')"/>
     </div>
   </div>
   </div>
